@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9D6418E82232055F00CB284A /* OrderWaitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6418E72232055F00CB284A /* OrderWaitTableViewController.swift */; };
 		9D6418EA22320E0000CB284A /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6418E922320E0000CB284A /* OrderTableViewController.swift */; };
+		9D6418EC2235EDEF00CB284A /* ShowSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6418EB2235EDEF00CB284A /* ShowSplashScreen.swift */; };
+		9D6418EE2235F16F00CB284A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6418ED2235F16F00CB284A /* MainTabBarController.swift */; };
 		9D755DA8222FAE0400D6407F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D755DA7222FAE0400D6407F /* AppDelegate.swift */; };
 		9D755DAD222FAE0400D6407F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D755DAB222FAE0400D6407F /* Main.storyboard */; };
 		9D755DAF222FAE0500D6407F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D755DAE222FAE0500D6407F /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		9D6418E72232055F00CB284A /* OrderWaitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWaitTableViewController.swift; sourceTree = "<group>"; };
 		9D6418E922320E0000CB284A /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		9D6418EB2235EDEF00CB284A /* ShowSplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSplashScreen.swift; sourceTree = "<group>"; };
+		9D6418ED2235F16F00CB284A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9D755DA4222FAE0400D6407F /* bossapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bossapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D755DA7222FAE0400D6407F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D755DAC222FAE0400D6407F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				9D755DB3222FAE0500D6407F /* Info.plist */,
 				9D6418E72232055F00CB284A /* OrderWaitTableViewController.swift */,
 				9D6418E922320E0000CB284A /* OrderTableViewController.swift */,
+				9D6418EB2235EDEF00CB284A /* ShowSplashScreen.swift */,
+				9D6418ED2235F16F00CB284A /* MainTabBarController.swift */,
 			);
 			path = bossapp;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D755DA8222FAE0400D6407F /* AppDelegate.swift in Sources */,
+				9D6418EC2235EDEF00CB284A /* ShowSplashScreen.swift in Sources */,
+				9D6418EE2235F16F00CB284A /* MainTabBarController.swift in Sources */,
 				9D6418EA22320E0000CB284A /* OrderTableViewController.swift in Sources */,
 				9D6418E82232055F00CB284A /* OrderWaitTableViewController.swift in Sources */,
 			);
