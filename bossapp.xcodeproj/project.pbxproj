@@ -12,6 +12,7 @@
 		9D6418EC2235EDEF00CB284A /* ShowSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6418EB2235EDEF00CB284A /* ShowSplashScreen.swift */; };
 		9D6418EE2235F16F00CB284A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6418ED2235F16F00CB284A /* MainTabBarController.swift */; };
 		9D6418F02236290B00CB284A /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6418EF2236290B00CB284A /* OrderTableViewCell.swift */; };
+		9D6418F222363ACE00CB284A /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6418F122363ACE00CB284A /* Order.swift */; };
 		9D755DA8222FAE0400D6407F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D755DA7222FAE0400D6407F /* AppDelegate.swift */; };
 		9D755DAD222FAE0400D6407F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D755DAB222FAE0400D6407F /* Main.storyboard */; };
 		9D755DAF222FAE0500D6407F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D755DAE222FAE0500D6407F /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		9D6418EB2235EDEF00CB284A /* ShowSplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSplashScreen.swift; sourceTree = "<group>"; };
 		9D6418ED2235F16F00CB284A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9D6418EF2236290B00CB284A /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		9D6418F122363ACE00CB284A /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		9D755DA4222FAE0400D6407F /* bossapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bossapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D755DA7222FAE0400D6407F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D755DAC222FAE0400D6407F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				9D6418EB2235EDEF00CB284A /* ShowSplashScreen.swift */,
 				9D6418ED2235F16F00CB284A /* MainTabBarController.swift */,
 				9D6418EF2236290B00CB284A /* OrderTableViewCell.swift */,
+				9D6418F122363ACE00CB284A /* Order.swift */,
 			);
 			path = bossapp;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				9D6418EE2235F16F00CB284A /* MainTabBarController.swift in Sources */,
 				9D6418EA22320E0000CB284A /* OrderTableViewController.swift in Sources */,
 				9D6418E82232055F00CB284A /* OrderWaitTableViewController.swift in Sources */,
+				9D6418F222363ACE00CB284A /* Order.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

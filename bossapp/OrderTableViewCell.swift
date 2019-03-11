@@ -41,3 +41,9 @@ class OrderTableViewCell: UITableViewCell {
     }
 
 }
+
+extension OrderTableViewCell{
+    func configure(order:Order,tableView:UITableView,indexPath:IndexPath){
+        
+    }
+}
