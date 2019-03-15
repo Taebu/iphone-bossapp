@@ -17,6 +17,7 @@
 		9D641901223B69B900CB284A /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D641900223B69B900CB284A /* OrderViewController.swift */; };
 		9D641903223B8DDD00CB284A /* OrderProcessingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D641902223B8DDD00CB284A /* OrderProcessingTableViewController.swift */; };
 		9D641905223B8DFA00CB284A /* OrderInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D641904223B8DFA00CB284A /* OrderInfoTableViewController.swift */; };
+		9D641907223B997500CB284A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9D641906223B997500CB284A /* README.md */; };
 		9D755DA8222FAE0400D6407F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D755DA7222FAE0400D6407F /* AppDelegate.swift */; };
 		9D755DAD222FAE0400D6407F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D755DAB222FAE0400D6407F /* Main.storyboard */; };
 		9D755DAF222FAE0500D6407F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D755DAE222FAE0500D6407F /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		9D641900223B69B900CB284A /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		9D641902223B8DDD00CB284A /* OrderProcessingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderProcessingTableViewController.swift; sourceTree = "<group>"; };
 		9D641904223B8DFA00CB284A /* OrderInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfoTableViewController.swift; sourceTree = "<group>"; };
+		9D641906223B997500CB284A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9D755DA4222FAE0400D6407F /* bossapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bossapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D755DA7222FAE0400D6407F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D755DAC222FAE0400D6407F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		9D755D9B222FAE0400D6407F = {
 			isa = PBXGroup;
 			children = (
+				9D641906223B997500CB284A /* README.md */,
 				9D755DA6222FAE0400D6407F /* bossapp */,
 				9D755DA5222FAE0400D6407F /* Products */,
 			);
@@ -182,6 +185,7 @@
 			files = (
 				9D755DB2222FAE0500D6407F /* LaunchScreen.storyboard in Resources */,
 				9D755DAF222FAE0500D6407F /* Assets.xcassets in Resources */,
+				9D641907223B997500CB284A /* README.md in Resources */,
 				9D6418F52236680200CB284A /* OrderTableViewCell.xib in Resources */,
 				9D755DAD222FAE0400D6407F /* Main.storyboard in Resources */,
 			);
