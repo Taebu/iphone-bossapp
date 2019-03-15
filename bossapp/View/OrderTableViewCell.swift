@@ -44,6 +44,22 @@ class OrderTableViewCell: UITableViewCell {
 
 extension OrderTableViewCell{
     func configure(order:Order,tableView:UITableView,indexPath:IndexPath){
+        self.storeNameLabel.text = order.st_name
+        self.orderDateLabel.text = order.insdate
+        self.orderTimeLabel.text = dateFormatting(string_date: order.insdate)
+        self.tradeIdLabel.text = order.Tradeid
+        self.orderButton.isSelected = true
         
+    }
+    
+    func dateFormatting(string_date:String ) -> String {
+        var date = Date()
+        let dateFormatter = DateFormatter()
+        date = dateFormatter.date(from: string_date)!
+        
+        dateFormatter.dateFormat = "HH:mm:ss"//"EE" to get short style
+        let mydt = dateFormatter.string(from: date).capitalized
+        
+        return "\(mydt)"
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qxe-IK-auR">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,26 +15,26 @@
             <objects>
                 <viewController id="GfY-4A-FaX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2MU-OO-BW3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="sSN-dK-Y5f">
-                                <rect key="frame" x="36.999999999999979" y="121" width="109.66666666666669" height="140"/>
+                                <rect key="frame" x="37" y="97" width="339" height="140"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사장님 아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-IT-FKR">
-                                        <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사장님 비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d0Z-Tz-QtI">
-                                        <rect key="frame" x="0.0" y="55" width="109.66666666666667" height="30"/>
+                                        <rect key="frame" x="0.0" y="55" width="339" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yh-Pk-Feu">
-                                        <rect key="frame" x="0.0" y="110" width="109.66666666666667" height="30"/>
+                                        <rect key="frame" x="0.0" y="110" width="339" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="로그인">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,13 +47,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="vrg-VI-tfa">
-                                <rect key="frame" x="-1" y="266" width="148.66666666666666" height="31"/>
+                                <rect key="frame" x="228.33333333333337" y="242" width="148.66666666666663" height="31"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJJ-Fd-J8J">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자동로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9S-CM-TjL">
-                                        <rect key="frame" x="75" y="0.0" width="73.666666666666686" height="31"/>
+                                        <rect key="frame" x="74.999999999999972" y="0.0" width="73.666666666666657" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -81,9 +81,9 @@
         <!--주문대기-->
         <scene sceneID="5qW-Ho-UDl">
             <objects>
-                <tableViewController id="ncA-9R-Bqh" sceneMemberID="viewController">
+                <tableViewController id="ncA-9R-Bqh" customClass="OrderWaitTableViewController" customModule="bossapp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TyL-2e-f2e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <connections>
@@ -92,6 +92,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="주문대기" id="fsa-WO-Z48"/>
+                    <connections>
+                        <segue destination="A5f-I7-Zqr" kind="show" identifier="showOrderInfo" id="Lqv-AQ-EK3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvE-qf-hrN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,9 +103,9 @@
         <!--주문현황-->
         <scene sceneID="iwQ-ps-5Af">
             <objects>
-                <tableViewController id="XT2-bI-OPz" sceneMemberID="viewController">
+                <tableViewController id="XT2-bI-OPz" customClass="OrderInfoTableViewController" customModule="bossapp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eqV-G5-4AZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <connections>
@@ -111,6 +114,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="주문현황" id="prF-g8-sLi"/>
+                    <connections>
+                        <segue destination="A5f-I7-Zqr" kind="show" identifier="showOrderInfo" id="S5u-hx-LRp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhc-OP-8mi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,7 +127,7 @@
             <objects>
                 <tableViewController id="J8J-lZ-BaF" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="m31-W5-bBa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <connections>
@@ -138,9 +144,9 @@
         <!--처리중-->
         <scene sceneID="vD0-JS-Nyx">
             <objects>
-                <tableViewController id="wHG-7U-D8X" sceneMemberID="viewController">
+                <tableViewController id="wHG-7U-D8X" customClass="OrderProcessingTableViewController" customModule="bossapp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="i1i-Jx-evk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <connections>
@@ -149,10 +155,53 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="처리중" id="XFr-7N-7XY"/>
+                    <connections>
+                        <segue destination="A5f-I7-Zqr" kind="show" identifier="showOrderInfo" id="KRm-bN-3Zv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5r-BB-Q28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2012" y="757.87106446776613"/>
+        </scene>
+        <!--상세주문보기-->
+        <scene sceneID="v7c-Zx-t2s">
+            <objects>
+                <viewController id="A5f-I7-Zqr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T4i-Bs-blB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sq1-Cq-7kE">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고객이 모두톡톡 결제를 완료하였습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNP-j3-Kz5">
+                                        <rect key="frame" x="0.0" y="5" width="414" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="XNP-j3-Kz5" firstAttribute="centerX" secondItem="Sq1-Cq-7kE" secondAttribute="centerX" id="GYt-RU-Rlf"/>
+                                    <constraint firstItem="XNP-j3-Kz5" firstAttribute="width" secondItem="Sq1-Cq-7kE" secondAttribute="width" id="R0G-RS-KdD"/>
+                                    <constraint firstItem="XNP-j3-Kz5" firstAttribute="top" secondItem="Sq1-Cq-7kE" secondAttribute="top" constant="5" id="dij-Ws-Srn"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sq1-Cq-7kE" firstAttribute="top" secondItem="V5p-2C-3nx" secondAttribute="top" id="5cA-6T-Gi5"/>
+                            <constraint firstItem="Sq1-Cq-7kE" firstAttribute="leading" secondItem="V5p-2C-3nx" secondAttribute="leading" id="9AR-yP-0QL"/>
+                            <constraint firstItem="V5p-2C-3nx" firstAttribute="trailing" secondItem="Sq1-Cq-7kE" secondAttribute="trailing" id="IL1-V6-prm"/>
+                            <constraint firstItem="V5p-2C-3nx" firstAttribute="bottom" secondItem="Sq1-Cq-7kE" secondAttribute="bottom" id="L84-dE-voa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V5p-2C-3nx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="상세주문보기" id="xYz-jO-1kJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7H-7S-dps" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3360" y="720"/>
         </scene>
         <!--주문대기-->
         <scene sceneID="F2T-zs-31k">
@@ -161,7 +210,7 @@
                     <tabBarItem key="tabBarItem" title="주문대기" image="new" selectedImage="new" id="ICz-Qj-mar"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vc9-du-ail">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -180,7 +229,7 @@
                     <tabBarItem key="tabBarItem" title="처리중" image="ing" badgeValue="메시지" selectedImage="ing" id="Ac1-vQ-5UH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1kJ-nd-O4X">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -199,7 +248,7 @@
                     <tabBarItem key="tabBarItem" title="주문현황" image="list" selectedImage="list" id="ogt-Ck-g2D"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bFQ-JM-Q9C">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -218,7 +267,7 @@
                     <tabBarItem key="tabBarItem" title="메뉴" image="home" selectedImage="home" id="Gak-e6-Uv6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ETM-EB-uoN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -237,7 +286,7 @@
                     <tabBarItem key="tabBarItem" title="주문조회" image="search" selectedImage="search" id="Ic0-uu-feS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t6J-nU-oaP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -255,6 +304,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ifc-2K-YVr" customClass="MainTabBarController" customModule="bossapp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F9O-Ji-JRs">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -275,7 +325,7 @@
             <objects>
                 <viewController id="CIE-rn-Vop" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DbE-uf-ogM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gTp-Cm-Phq">
@@ -327,7 +377,7 @@
             <objects>
                 <viewController id="NR5-6W-Trn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H0G-2x-Juh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2O-Au-In3">
@@ -351,11 +401,11 @@
             <objects>
                 <viewController id="qxe-IK-auR" customClass="ShowSplashScreen" customModule="bossapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WoL-5V-4Tp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-image" translatesAutoresizingMaskIntoConstraints="NO" id="eIr-Q8-bhN">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -386,4 +436,7 @@
         <image name="search" width="25" height="25"/>
         <image name="splash-image" width="720" height="1250"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="S5u-hx-LRp"/>
+    </inferredMetricsTieBreakers>
 </document>
