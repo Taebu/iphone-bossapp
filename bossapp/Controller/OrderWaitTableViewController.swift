@@ -218,6 +218,7 @@ extension OrderWaitTableViewController {
         
         let order: Order = self.orders[index.row]
         orderViewController.order = order
+
         // orderViewController.thumbnailImage = cell.profileImageView.image
     }
 }
