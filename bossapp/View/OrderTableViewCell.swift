@@ -44,11 +44,17 @@ class OrderTableViewCell: UITableViewCell {
 
 extension OrderTableViewCell{
     func configure(order:Order,tableView:UITableView,indexPath:IndexPath){
-        self.storeNameLabel.text = order.st_name
-        self.orderDateLabel.text = order.insdate
-        self.orderTimeLabel.text = dateFormatting(string_date: order.insdate)
-        self.tradeIdLabel.text = order.Tradeid
-        self.orderButton.isSelected = true
+   //     self.storeNameLabel.text = order.st_name
+        self.storeNameLabel.text = "BBQ치킨 영등포점"
+        
+        self.orderDateLabel.text = "2018/06/29(화)"
+
+        //self.orderTimeLabel.text = dateFormatting(string_date: "2019-01-03 09:31:12")
+
+        self.orderTimeLabel.text =  "18:15"
+        self.tradeIdLabel.text = "ASDFQW123456"
+        self.customerAddressLabel.text = "서울특별시 영등포구 영등포동 618-496"
+        //  self.orderButton.isSelected = true
         
     }
     

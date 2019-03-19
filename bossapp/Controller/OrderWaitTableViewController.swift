@@ -64,10 +64,8 @@ extension OrderWaitTableViewController {
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: OrderTableViewCell
-        cell = tableView.dequeueReusableCell(withIdentifier: "orderCell",
+        let cell = tableView.dequeueReusableCell(withIdentifier: "orderCell",
                                              for: indexPath) as! OrderTableViewCell
-        
         cell.delegate = self as OrderTableViewCellDelegate
         
         guard indexPath.row < self.orders.count else {
@@ -108,7 +106,6 @@ extension OrderWaitTableViewController {
         let safeAreaLayoutGuide: UILayoutGuide = self.view.safeAreaLayoutGuide
         
         self.indicator.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
-        self.indicator.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor).isActive = true
         
         indicator.startAnimating()
     }
@@ -139,6 +136,7 @@ extension OrderWaitTableViewController {
                 self.orders = orders
                 self.tableView.reloadSections(IndexSet(0...0),
                                               with: UITableView.RowAnimation.automatic)
+                
             }
             /* 새로고침 */
             if let refreshControl: UIRefreshControl = self.tableView.refreshControl,
@@ -159,23 +157,24 @@ extension OrderWaitTableViewController {
 extension OrderWaitTableViewController {
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        /* FriendTableViewCell.xib custom table load and init */
-        let cellNib: UINib = UINib.init(nibName: "OrderTableViewCell",
-                                        bundle: nil)
-        
-        self.tableView.register(cellNib,
-                                forCellReuseIdentifier: "orderCell")
-        
-        let refreshControl: UIRefreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(self.requestOrders),
-                                 for: UIControl.Event.valueChanged)
-        refreshControl.tintColor = UIColor.blue
-        
-        self.tableView.refreshControl = refreshControl
-        self.tableView.estimatedRowHeight = 100
-        self.tableView.rowHeight = UITableView.automaticDimension
+            super.viewDidLoad()
+
+            /* FriendTableViewCell.xib custom table load and init
+            let cellNib: UINib = UINib.init(nibName: "OrderTableViewCell",
+            bundle: nil)
+
+            self.tableView.register(cellNib,
+            forCellReuseIdentifier: "orderCell")
+
+            let refreshControl: UIRefreshControl = UIRefreshControl()
+            refreshControl.addTarget(self, action: #selector(self.requestOrders),for: UIControl.Event.valueChanged)
+            refreshControl.tintColor = UIColor.blue
+    
+
+            self.tableView.refreshControl = refreshControl
+            self.tableView.estimatedRowHeight = 1200
+            self.tableView.rowHeight = UITableView.automaticDimension
+  */
     }
     
     override func viewWillAppear(_ animated: Bool) {

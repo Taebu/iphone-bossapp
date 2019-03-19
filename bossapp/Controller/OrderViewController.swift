@@ -24,7 +24,7 @@ class OrderViewController: UIViewController {
     // MARK: Stored Properties
     var order: Order! {
         didSet {
-            self.navigationItem.title = order.st_name.uppercased()
+            self.navigationItem.title = "order.name"
             self.correctBarButtonState()
         }
     }
@@ -56,12 +56,12 @@ extension OrderViewController {
         
 //        if Person.bestFriends.contains(self.order) {
         if true {
-            bottomBarButtonItem = self.fullStarButton
+//            bottomBarButtonItem = self.fullStarButton
         } else {
-            bottomBarButtonItem = self.emptyStarButton
+//            bottomBarButtonItem = self.emptyStarButton
         }
         
-        self.navigationItem.rightBarButtonItems = [bottomBarButtonItem]
+ //       self.navigationItem.rightBarButtonItems = [bottomBarButtonItem]
     }
 }
 ///
@@ -105,8 +105,8 @@ extension OrderViewController {
         
         self.correctBarButtonState()
         
-        self.storeName.text = order.st_name
-        //self.cellLabel.text = order.address_name
+        self.storeName.text = order.name.full
+        self.cellLabel.text = order.cell
         //self.orderTime.text = order.insdate
        // self.imageView.image = self.thumbnailImage ?? placeHolderImage
         

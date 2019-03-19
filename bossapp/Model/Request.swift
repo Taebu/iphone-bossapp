@@ -1,6 +1,6 @@
 //
 //  Request.swift
-//  Friends
+//  bossapp
 //
 //  Created by yagom on 2017
 //  Copyright © 2017년 yagom. All rights reserved.
@@ -23,7 +23,7 @@ struct Response: Codable {
 // API 요청을 담당할 구조체
 struct Request {
     // MARK: - Private Properties
-    private static let ordersURL: URL = URL(string: "https://randomuser.me/api/1.1/?inc=name,nat,cell,picture&format=json&results=50&noinfo")!
+    private static let ordersURL: URL = URL(string: "https://randomuser.me/api/1.1/?inc=name,nat,cell,picture&format=json&results=10&noinfo")!
     
     // 이미지 다운로드 디스패치 큐
     private static let imageDispatchQueue: DispatchQueue = DispatchQueue(label: "image")
@@ -35,7 +35,7 @@ struct Request {
 // MARK: - Friends
 extension Request {
     // 친구목록 요청
-    static func orders(_ completion: @escaping (_ friends: [Order]?) -> Void) {
+    static func orders(_ completion: @escaping (_ orders: [Order]?) -> Void) {
         let session: URLSession = URLSession(configuration: URLSessionConfiguration.default)
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true

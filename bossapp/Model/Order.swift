@@ -1,6 +1,6 @@
  //
  //  Order.swift
- //  Friends
+ //  bossapp
  //
  //  Created by ANP on 3/4/19.
  //  Copyright © 2019 ANPR. All rights reserved.
@@ -14,6 +14,7 @@
  struct Order: Codable, Equatable {
     
     // MARK: - Nested Types
+  /*
     struct Address: Codable, Equatable {
         let mb_addr1: String
         let mb_addr2: String
@@ -22,17 +23,32 @@
             return "\(self.mb_addr1)  \(self.mb_addr2)"
         }
     }
+    */
+    struct Name: Codable, Equatable {
+        let title: String
+        let first: String
+        let last: String
+        var full: String {
+            return "\(self.title). \(self.last). \(self.first)"
+        }
+    }
+    
     // MARK: - Properties
+    /*
     let address_name: Address
     let insdate: String
     let st_name: String
     let Tradeid: String
+*/
+    let cell: String
+    let name: Name
  }
  
  // MARK: - Coding Keys
  extension Order {
     enum CodingKeys: String, CodingKey {
-        case address_name, insdate,st_name,Tradeid
+ //       case name, address_name, insdate,st_name,Tradeid
+        case name,cell
     }
  }
  
