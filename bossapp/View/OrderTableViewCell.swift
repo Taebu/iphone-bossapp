@@ -45,7 +45,7 @@ class OrderTableViewCell: UITableViewCell {
 extension OrderTableViewCell{
     func configure(order:Order,tableView:UITableView,indexPath:IndexPath){
    //     self.storeNameLabel.text = order.st_name
-        self.storeNameLabel.text = "BBQ치킨 영등포점"
+        self.storeNameLabel.text = "BBQ"
         
         self.orderDateLabel.text = "2018/06/29(화)"
 
@@ -69,3 +69,4 @@ extension OrderTableViewCell{
         return "\(mydt)"
     }
 }
+

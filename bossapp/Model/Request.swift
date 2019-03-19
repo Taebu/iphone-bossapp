@@ -16,14 +16,17 @@ struct Response: Codable {
     let orders: [Order]
     
     enum CodingKeys: String, CodingKey {
-        case orders = "results"
+        case orders = "posts"
     }
 }
 
 // API 요청을 담당할 구조체
 struct Request {
     // MARK: - Private Properties
-    private static let ordersURL: URL = URL(string: "https://randomuser.me/api/1.1/?inc=name,nat,cell,picture&format=json&results=10&noinfo")!
+     //private static let ordersURL: URL = URL(string: "https://randomuser.me/api/1.1/?inc=name,nat,cell,picture&format=json&results=10&noinfo")!
+
+     private static let ordersURL: URL = URL(string: "https://www.cashq.co.kr/ext/dyinfo/get_order3.php?id=B0006797&listsize=1")!
+
     
     // 이미지 다운로드 디스패치 큐
     private static let imageDispatchQueue: DispatchQueue = DispatchQueue(label: "image")
@@ -37,7 +40,7 @@ extension Request {
     // 친구목록 요청
     static func orders(_ completion: @escaping (_ orders: [Order]?) -> Void) {
         let session: URLSession = URLSession(configuration: URLSessionConfiguration.default)
-        
+       
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let dataTask: URLSessionDataTask = session.dataTask(with: ordersURL) {
             (data: Data?, response: URLResponse?, error: Error?) in
@@ -62,6 +65,8 @@ extension Request {
                 DispatchQueue.main.async {
                     completion(decodedResponse.orders)
                 }
+                
+                session.finishTasksAndInvalidate()
             } catch {
                 print("응답 디코딩 실패")
                 print(error.localizedDescription)
@@ -74,6 +79,7 @@ extension Request {
         
         dataTask.resume()
     }
+    
 }
 
 

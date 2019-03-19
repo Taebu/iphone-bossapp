@@ -165,16 +165,14 @@ extension OrderWaitTableViewController {
 
             self.tableView.register(cellNib,
             forCellReuseIdentifier: "orderCell")
-
+*/
             let refreshControl: UIRefreshControl = UIRefreshControl()
             refreshControl.addTarget(self, action: #selector(self.requestOrders),for: UIControl.Event.valueChanged)
             refreshControl.tintColor = UIColor.blue
     
 
             self.tableView.refreshControl = refreshControl
-            self.tableView.estimatedRowHeight = 1200
-            self.tableView.rowHeight = UITableView.automaticDimension
-  */
+  
     }
     
     override func viewWillAppear(_ animated: Bool) {

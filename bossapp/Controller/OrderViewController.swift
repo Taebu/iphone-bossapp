@@ -105,8 +105,8 @@ extension OrderViewController {
         
         self.correctBarButtonState()
         
-        self.storeName.text = order.name.full
-        self.cellLabel.text = order.cell
+        self.storeName.text = order.st_name
+        self.cellLabel.text = order.insdate
         //self.orderTime.text = order.insdate
        // self.imageView.image = self.thumbnailImage ?? placeHolderImage
         
