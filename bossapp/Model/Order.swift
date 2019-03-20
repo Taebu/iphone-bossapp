@@ -14,6 +14,7 @@
  struct Order: Codable, Equatable {
     
     // MARK: - Nested Type
+    /*
     struct Address: Codable, Equatable {
         let mb_addr1: String
         let mb_addr2: String
@@ -22,11 +23,12 @@
             return "\(self.mb_addr1)  \(self.mb_addr2)"
         }
     }
-    
+    */
     
     // MARK: - Properties
     
-    let address_name: Address
+    let mb_addr1: String
+    let mb_addr2: String
     let insdate: String
     let st_name: String
     let Tradeid: String
@@ -36,7 +38,7 @@
  // MARK: - Coding Keys
  extension Order {
     enum CodingKeys: String, CodingKey {
-        case address_name, insdate, st_name, Tradeid
+        case mb_addr1,mb_addr2, insdate, st_name, Tradeid
     }
  }
  

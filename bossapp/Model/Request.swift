@@ -23,10 +23,11 @@ struct Response: Codable {
 // API 요청을 담당할 구조체
 struct Request {
     // MARK: - Private Properties
-     //private static let ordersURL: URL = URL(string: "https://randomuser.me/api/1.1/?inc=name,nat,cell,picture&format=json&results=10&noinfo")!
+    //private static let ordersURL: URL = URL(string: "https://randomuser.me/api/1.1/?inc=name,nat,cell,picture&format=json&results=10&noinfo")!
 
-     private static let ordersURL: URL = URL(string: "https://www.cashq.co.kr/ext/dyinfo/get_order3.php?id=B0006797&listsize=1")!
+    //     private static let ordersURL: URL = URL(string: "https://www.cashq.co.kr/ext/dyinfo/get_order3.php?id=B0006797&listsize=1")!
 
+    private static let ordersURL: URL = URL(string: "https://prq.co.kr/prq/list.php")!
     
     // 이미지 다운로드 디스패치 큐
     private static let imageDispatchQueue: DispatchQueue = DispatchQueue(label: "image")

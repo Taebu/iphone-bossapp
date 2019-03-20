@@ -45,28 +45,52 @@ class OrderTableViewCell: UITableViewCell {
 extension OrderTableViewCell{
     func configure(order:Order,tableView:UITableView,indexPath:IndexPath){
    //     self.storeNameLabel.text = order.st_name
-        self.storeNameLabel.text = "BBQ"
+        self.storeNameLabel.text = order.st_name
+        self.orderDateLabel.text = dateFormatting(order.insdate)
+
+
         
-        self.orderDateLabel.text = "2018/06/29(화)"
+        //self.orderTimeLabel.text =  order.insdate
+        self.orderTimeLabel.text = timeFormatting(order.insdate)
 
-        //self.orderTimeLabel.text = dateFormatting(string_date: "2019-01-03 09:31:12")
-
-        self.orderTimeLabel.text =  "18:15"
-        self.tradeIdLabel.text = "ASDFQW123456"
-        self.customerAddressLabel.text = "서울특별시 영등포구 영등포동 618-496"
+        self.tradeIdLabel.text = order.Tradeid
+        self.customerAddressLabel.text = """
+        \(order.mb_addr1)
+        \(order.mb_addr2)
+        """
         //  self.orderButton.isSelected = true
         
     }
     
-    func dateFormatting(string_date:String ) -> String {
-        var date = Date()
+    func timeFormatting(_ date: String) -> String {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
         let dateFormatter = DateFormatter()
-        date = dateFormatter.date(from: string_date)!
+        dateFormatter.dateFormat = "HH:mm"
+        var dateString = ""
+        if let date = dateFormatterGet.date(from: date) {
+            dateString = dateFormatter.string(from: date)
+        } else {
+            dateString = "There was an error decoding the string"
+        }
+        return dateString
+    }
+    
+    
+    func dateFormatting(_ date: String) -> String {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
-        dateFormatter.dateFormat = "HH:mm:ss"//"EE" to get short style
-        let mydt = dateFormatter.string(from: date).capitalized
-        
-        return "\(mydt)"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        var dateString = ""
+        if let date = dateFormatterGet.date(from: date) {
+             dateString = dateFormatter.string(from: date)
+        } else {
+           dateString = "There was an error decoding the string"
+        }
+        return dateString
     }
 }
 
