@@ -46,6 +46,7 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var menuNameData2:NSMutableArray = ["세트 4(양념+마늘간장) 1개", "주문금액","세트 4(양념+마늘간장) 1개", "주문금액"]
     var menuPriceData2:NSMutableArray = ["24,000원", "24,000원","24,000원", "24,000원"]
     
+    var orderNameArrayData2:NSMutableArray = ["","","",""]
     
     // MARK: - Properties
     var thumbnailImage: UIImage?
@@ -179,6 +180,8 @@ extension OrderViewController {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let defaultCell:UITableViewCell
+        
         if tableView == orderPayTableView
         {
 
@@ -201,7 +204,7 @@ extension OrderViewController {
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         self.view.layoutIfNeeded()
         
-            return cell
+            defaultCell = cell
         }else{
         
             let cell = orderAddressTableView.dequeueReusableCell(withIdentifier: "orderAddressCell", for: indexPath) as! OrderAddressCell
@@ -215,9 +218,9 @@ extension OrderViewController {
             cell.selectionStyle = UITableViewCell.SelectionStyle.none
             self.view.layoutIfNeeded()
             
-            return cell
+            defaultCell = cell
         }
-        
+        return defaultCell
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -20,22 +20,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="sSN-dK-Y5f">
-                                <rect key="frame" x="36.999999999999979" y="97" width="109.66666666666669" height="140"/>
+                                <rect key="frame" x="37" y="97" width="339" height="140"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사장님 아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-IT-FKR">
-                                        <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사장님 비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d0Z-Tz-QtI">
-                                        <rect key="frame" x="0.0" y="55" width="109.66666666666667" height="30"/>
+                                        <rect key="frame" x="0.0" y="55" width="339" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yh-Pk-Feu">
-                                        <rect key="frame" x="0.0" y="110" width="109.66666666666667" height="30"/>
+                                        <rect key="frame" x="0.0" y="110" width="339" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="로그인">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,13 +48,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="vrg-VI-tfa">
-                                <rect key="frame" x="-1" y="242" width="148.66666666666666" height="31"/>
+                                <rect key="frame" x="228.33333333333337" y="242" width="148.66666666666663" height="31"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJJ-Fd-J8J">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자동로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9S-CM-TjL">
-                                        <rect key="frame" x="75" y="0.0" width="73.666666666666686" height="31"/>
+                                        <rect key="frame" x="74.999999999999972" y="0.0" width="73.666666666666657" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -483,7 +483,7 @@
                                                     <constraint firstAttribute="height" constant="128" id="htE-gk-bv7"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderAddressCell" textLabel="Hx0-cP-5lf" detailTextLabel="t6N-1d-bnu" rowHeight="72" style="IBUITableViewCellStyleValue1" id="0bq-hd-ofF" customClass="OrderAddressCell">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderAddressCell" textLabel="Hx0-cP-5lf" detailTextLabel="t6N-1d-bnu" imageView="KmQ-de-nei" rowHeight="72" style="IBUITableViewCellStyleValue1" id="0bq-hd-ofF" customClass="OrderAddressCell">
                                                         <rect key="frame" x="0.0" y="28" width="414" height="72"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0bq-hd-ofF" id="3Uv-JD-qRg">
@@ -504,11 +504,13 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KmQ-de-nei">
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </imageView>
                                                             </subviews>
                                                         </tableViewCellContentView>
                                                         <connections>
                                                             <outlet property="orderAddressDetail" destination="t6N-1d-bnu" id="wz9-Rt-bfs"/>
-                                                            <outlet property="orderAddressTItle" destination="Hx0-cP-5lf" id="76R-U0-8kV"/>
                                                             <outlet property="orderAddressTitle" destination="Hx0-cP-5lf" id="2WI-jb-uWn"/>
                                                         </connections>
                                                     </tableViewCell>
