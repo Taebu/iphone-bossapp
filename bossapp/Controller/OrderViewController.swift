@@ -43,8 +43,8 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var orderNameArrayData:NSMutableArray = ["","","",""]
     
     
-    var menuNameData2:NSMutableArray = ["세트 4(양념+마늘간장) 1개", "주문금액","세트 4(양념+마늘간장) 1개", "주문금액"]
-    var menuPriceData2:NSMutableArray = ["24,000원", "24,000원","24,000원", "24,000원"]
+    var menuNameData2:NSMutableArray = ["연락처", "배달주소"]
+    var menuPriceData2:NSMutableArray = ["050-1234-1234", "서울특별시 영등포구 .."]
     
     var orderNameArrayData2:NSMutableArray = ["","","",""]
     
