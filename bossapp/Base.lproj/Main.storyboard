@@ -537,6 +537,9 @@
                                                         <state key="normal" title="주문접수">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="showDeliveryAccept:" destination="A5f-I7-Zqr" eventType="touchUpInside" id="Zok-eF-ywP"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>

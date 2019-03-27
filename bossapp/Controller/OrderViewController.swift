@@ -116,6 +116,15 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     */
     
+    @IBAction func showDeliveryAccept(_ sender: Any) {
+        
+        let popupVC:DeliveryAcceptViewController = UIStoryboard(name: "DeliveryAccept", bundle: nil).instantiateViewController(withIdentifier:"deliverAcceptVC") as! DeliveryAcceptViewController
+        popupVC.modalPresentationStyle = .overCurrentContext
+        self.present(popupVC, animated: false){ }
+        
+    }
+    
+    
 }
 
 
@@ -341,4 +350,6 @@ extension OrderViewController {
         
         self.view.layoutIfNeeded()
     }
+    
+    
 }

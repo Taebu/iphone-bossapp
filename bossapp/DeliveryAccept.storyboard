@@ -18,13 +18,128 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9cR-EA-GVQ">
-                                <rect key="frame" x="35" y="200" width="308" height="265"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tq1-XM-Vqk">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yef-eS-R8D">
+                                <rect key="frame" x="50" y="148" width="275" height="340"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQY-E6-Dsq">
+                                        <rect key="frame" x="0.0" y="310" width="275" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9i-Gd-4JA">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="30"/>
+                                                <state key="normal" title="뒤로"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49Z-ZX-nBJ">
+                                                <rect key="frame" x="69" y="0.0" width="206" height="30"/>
+                                                <state key="normal" title="주문접수"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="D9i-Gd-4JA" firstAttribute="width" secondItem="49Z-ZX-nBJ" secondAttribute="width" multiplier="1:3" id="hrj-v7-s92"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="wiY-nN-XEz">
+                                        <rect key="frame" x="0.0" y="214.5" width="275" height="87.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOj-tW-4A7">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="87.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="VOj-tW-4A7" secondAttribute="height" multiplier="1:0.7" id="CT4-vK-bMV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                                <state key="normal" title="80분"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ui-iX-H9H">
+                                                <rect key="frame" x="150" y="0.0" width="125" height="87.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                                <state key="normal" title="90분"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="VOj-tW-4A7" firstAttribute="width" secondItem="4ui-iX-H9H" secondAttribute="width" id="7dC-mh-UIn"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="5jP-YQ-845">
+                                        <rect key="frame" x="0.0" y="127" width="275" height="87.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpt-pM-Vy4">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="87.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Kpt-pM-Vy4" secondAttribute="height" multiplier="1:0.7" id="MPu-GB-p4M"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                                <state key="normal" title="60분"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZO-qX-VzB">
+                                                <rect key="frame" x="150" y="0.0" width="125" height="87.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                                <state key="normal" title="70분"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Kpt-pM-Vy4" firstAttribute="width" secondItem="YZO-qX-VzB" secondAttribute="width" id="tcE-b8-lGZ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-eG-RTZ">
+                                        <rect key="frame" x="0.0" y="39.5" width="275" height="87.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2as-wW-qI9">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="87.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2as-wW-qI9" secondAttribute="height" multiplier="1:0.7" id="Xax-5D-s42"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                                <state key="normal" title="40분"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYD-Ok-6tB">
+                                                <rect key="frame" x="150" y="0.0" width="125" height="87.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                                <state key="normal" title="50분"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="2as-wW-qI9" firstAttribute="width" secondItem="vYD-Ok-6tB" secondAttribute="width" id="UiH-YM-5dT"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bQY-E6-Dsq" secondAttribute="trailing" id="3hv-Nq-Dnk"/>
+                                    <constraint firstItem="bQY-E6-Dsq" firstAttribute="leading" secondItem="4og-zS-79I" secondAttribute="leading" id="8Zd-t1-axp"/>
+                                    <constraint firstItem="4og-zS-79I" firstAttribute="trailing" secondItem="5jP-YQ-845" secondAttribute="trailing" id="Dd1-SF-1w5"/>
+                                    <constraint firstItem="bQY-E6-Dsq" firstAttribute="top" secondItem="wiY-nN-XEz" secondAttribute="bottom" id="FhC-0v-b8W"/>
+                                    <constraint firstItem="bQY-E6-Dsq" firstAttribute="bottom" secondItem="4og-zS-79I" secondAttribute="bottom" id="Fqx-4p-vd6"/>
+                                    <constraint firstItem="5jP-YQ-845" firstAttribute="top" secondItem="dbZ-eG-RTZ" secondAttribute="bottom" id="LBr-ge-55m"/>
+                                    <constraint firstItem="wiY-nN-XEz" firstAttribute="top" secondItem="5jP-YQ-845" secondAttribute="bottom" id="PHz-R1-aOl"/>
+                                    <constraint firstItem="bQY-E6-Dsq" firstAttribute="trailing" secondItem="4og-zS-79I" secondAttribute="trailing" id="U5O-P5-COn"/>
+                                    <constraint firstItem="wiY-nN-XEz" firstAttribute="leading" secondItem="4og-zS-79I" secondAttribute="leading" id="VkA-f8-tav"/>
+                                    <constraint firstItem="4og-zS-79I" firstAttribute="bottom" secondItem="bQY-E6-Dsq" secondAttribute="bottom" id="WGV-RR-osa"/>
+                                    <constraint firstItem="bQY-E6-Dsq" firstAttribute="top" secondItem="wiY-nN-XEz" secondAttribute="bottom" constant="8" symbolic="YES" id="Y6P-Bk-Rlv"/>
+                                    <constraint firstItem="5jP-YQ-845" firstAttribute="leading" secondItem="4og-zS-79I" secondAttribute="leading" id="ZhU-eI-z0U"/>
+                                    <constraint firstItem="4og-zS-79I" firstAttribute="trailing" secondItem="wiY-nN-XEz" secondAttribute="trailing" id="abK-Ug-n0a"/>
+                                    <constraint firstItem="bQY-E6-Dsq" firstAttribute="leading" secondItem="4og-zS-79I" secondAttribute="leading" id="azh-5g-ScV"/>
+                                    <constraint firstItem="4og-zS-79I" firstAttribute="trailing" secondItem="bQY-E6-Dsq" secondAttribute="trailing" id="dAa-lg-VuA"/>
+                                    <constraint firstItem="4og-zS-79I" firstAttribute="trailing" secondItem="dbZ-eG-RTZ" secondAttribute="trailing" id="dPY-kp-GDI"/>
+                                    <constraint firstItem="dbZ-eG-RTZ" firstAttribute="leading" secondItem="4og-zS-79I" secondAttribute="leading" id="slD-nT-g4Q"/>
+                                    <constraint firstItem="bQY-E6-Dsq" firstAttribute="leading" secondItem="4og-zS-79I" secondAttribute="leading" id="uDG-sk-edr"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="4og-zS-79I"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tq1-XM-Vqk" firstAttribute="leading" secondItem="X4f-aN-rt4" secondAttribute="leading" id="55Z-Wa-7Kx"/>
+                            <constraint firstItem="X4f-aN-rt4" firstAttribute="trailing" secondItem="Tq1-XM-Vqk" secondAttribute="trailing" id="769-Zg-pkr"/>
+                            <constraint firstItem="X4f-aN-rt4" firstAttribute="bottom" secondItem="yef-eS-R8D" secondAttribute="bottom" constant="179" id="7tA-eg-ksD"/>
+                            <constraint firstItem="yef-eS-R8D" firstAttribute="top" secondItem="X4f-aN-rt4" secondAttribute="top" constant="128" id="ARe-Yh-Vr0"/>
+                            <constraint firstItem="Tq1-XM-Vqk" firstAttribute="top" secondItem="X4f-aN-rt4" secondAttribute="top" id="HO5-CS-91b"/>
+                            <constraint firstAttribute="trailing" secondItem="yef-eS-R8D" secondAttribute="trailing" constant="50" id="R7e-Ru-YZI"/>
+                            <constraint firstItem="Tq1-XM-Vqk" firstAttribute="centerX" secondItem="YcD-xS-l9F" secondAttribute="centerX" id="otL-52-muM"/>
+                            <constraint firstItem="Tq1-XM-Vqk" firstAttribute="bottom" secondItem="X4f-aN-rt4" secondAttribute="bottom" id="xKK-7z-mId"/>
+                            <constraint firstItem="yef-eS-R8D" firstAttribute="leading" secondItem="X4f-aN-rt4" secondAttribute="leading" constant="50" id="yiM-kU-R0R"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="X4f-aN-rt4"/>
                     </view>
                 </viewController>
