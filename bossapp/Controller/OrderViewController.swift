@@ -71,7 +71,7 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var menuTitleData:NSMutableArray = ["주문업소", "주문시간","접수시간","배달시간","주문번호","주문금액","할인금액","배달금액","맛집배달팁"]
     var menuDetailData:NSMutableArray = ["BBQ치킨 영등포본점", "06/26(화) 11:27","06/26(화) 11:27","40분 내 배달","ASDF123456","56,000원","0","2,000원","2,000원"]
     
-    
+
     // MARK: - Properties
     var thumbnailImage: UIImage?
     
