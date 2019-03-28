@@ -203,19 +203,34 @@ extension OrderViewController {
         
         menuPriceData[3] = order.appamount
         menuPriceData[2] = order.Tradeid
-        menuPriceData[1] = "order"
+        menuPriceData[1] = order.delivery_amount
   
         menuPriceData2[0] = order.mb_hp
         menuPriceData2[1] = """
 \(order.mb_addr1)
 \(order.mb_addr2)
 """
+        /*주문정보. 주문업소 */
         menuDetailData[0] = order.st_name
+        /*주문정보. 주문시간 */
         menuDetailData[1] = order.insdate
+        
+        /*주문정보. 접수시간 */
         menuDetailData[2] = order.up_time
+        
+        /*주문정보. 배달시간*/
         menuDetailData[3] = order.exam_num2
         
+        /*주문정보. 주문번호*/
         menuDetailData[4] = order.Tradeid
+        /*주문정보. 주문금액*/
+        menuDetailData[5] = order.total_amount
+        
+        /*주문정보. 배달금액*/
+        menuDetailData[6] = order.delivery_amount
+        
+        /*주문정보. 맛집배달 팁*/
+        menuDetailData[7] = order.delicious_delivery_amount
         /*
         let decoder = JSONDecoder()
         var jsonData = try JSONSerialization.data(withJSONObject:  order.json_menudata)

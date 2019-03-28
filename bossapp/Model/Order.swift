@@ -38,13 +38,18 @@
     let up_time :String
     let exam_num1: String
     let exam_num2: String
-
+    
+    let total_amount: String
+    let delivery_amount: String
+    let delicious_delivery_amount: String
+    
+    
  }
  
  // MARK: - Coding Keys
  extension Order {
     enum CodingKeys: String, CodingKey {
-        case mb_addr1,mb_addr2, insdate, st_name, Tradeid, mb_hp, appamount, json_menudata, up_time, exam_num1, exam_num2
+        case mb_addr1,mb_addr2, insdate, st_name, Tradeid, mb_hp, appamount, json_menudata, up_time, exam_num1, exam_num2, total_amount, delivery_amount, delicious_delivery_amount
     }
  }
  

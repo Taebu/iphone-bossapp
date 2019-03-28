@@ -41,7 +41,7 @@ extension Request {
     // 친구목록 요청
     static func orders(order_status: String,_ completion: @escaping (_ orders: [Order]?) -> Void) {
         let session: URLSession = URLSession(configuration: URLSessionConfiguration.default)
-        var ordersURL: URL = URL(string: "https://img.cashq.co.kr/api/get_order.php?id=B0084902&status="+order_status)!
+        var ordersURL: URL = URL(string: "https://img.cashq.co.kr/api/get_order.php?id=B0084702&status="+order_status)!
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let dataTask: URLSessionDataTask = session.dataTask(with: ordersURL) {
