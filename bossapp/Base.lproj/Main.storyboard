@@ -530,6 +530,9 @@
                                                         <state key="normal" title="접수취소">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="showDeliveryDeny:" destination="A5f-I7-Zqr" eventType="touchUpInside" id="z0M-TP-uT7"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqz-4S-nWq">
                                                         <rect key="frame" x="109.66666666666666" y="0.0" width="304.33333333333337" height="30"/>

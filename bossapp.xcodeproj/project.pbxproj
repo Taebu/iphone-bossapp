@@ -23,6 +23,8 @@
 		9D770CCB223F4801008C7614 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D770CCA223F4801008C7614 /* Request.swift */; };
 		9D770E81224B3C70008C7614 /* DeliveryAcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D770E80224B3C6F008C7614 /* DeliveryAcceptViewController.swift */; };
 		9D770E83224B3C9F008C7614 /* DeliveryAccept.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D770E82224B3C9F008C7614 /* DeliveryAccept.storyboard */; };
+		9D770E86224C5B30008C7614 /* DeliveryDenyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D770E85224C5B2F008C7614 /* DeliveryDenyViewController.swift */; };
+		9DED2568224C6BDA00F6195D /* DeliveryDeny.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DED2567224C6BD900F6195D /* DeliveryDeny.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		9D770CCA223F4801008C7614 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		9D770E80224B3C6F008C7614 /* DeliveryAcceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAcceptViewController.swift; sourceTree = "<group>"; };
 		9D770E82224B3C9F008C7614 /* DeliveryAccept.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeliveryAccept.storyboard; sourceTree = "<group>"; };
+		9D770E85224C5B2F008C7614 /* DeliveryDenyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDenyViewController.swift; sourceTree = "<group>"; };
+		9DED2567224C6BD900F6195D /* DeliveryDeny.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeliveryDeny.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +122,9 @@
 				9D755DB0222FAE0500D6407F /* LaunchScreen.storyboard */,
 				9D755DB3222FAE0500D6407F /* Info.plist */,
 				9D770E80224B3C6F008C7614 /* DeliveryAcceptViewController.swift */,
+				9D770E85224C5B2F008C7614 /* DeliveryDenyViewController.swift */,
 				9D770E82224B3C9F008C7614 /* DeliveryAccept.storyboard */,
+				9DED2567224C6BD900F6195D /* DeliveryDeny.storyboard */,
 			);
 			path = bossapp;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 			files = (
 				9D755DB2222FAE0500D6407F /* LaunchScreen.storyboard in Resources */,
 				9D755DAF222FAE0500D6407F /* Assets.xcassets in Resources */,
+				9DED2568224C6BDA00F6195D /* DeliveryDeny.storyboard in Resources */,
 				9D641907223B997500CB284A /* README.md in Resources */,
 				9D770E83224B3C9F008C7614 /* DeliveryAccept.storyboard in Resources */,
 				9D755DAD222FAE0400D6407F /* Main.storyboard in Resources */,
@@ -209,6 +216,7 @@
 				9D6418EE2235F16F00CB284A /* MainTabBarController.swift in Sources */,
 				9D6418E82232055F00CB284A /* OrderWaitTableViewController.swift in Sources */,
 				9D770CCB223F4801008C7614 /* Request.swift in Sources */,
+				9D770E86224C5B30008C7614 /* DeliveryDenyViewController.swift in Sources */,
 				9D770E81224B3C70008C7614 /* DeliveryAcceptViewController.swift in Sources */,
 				9D6418F222363ACE00CB284A /* Order.swift in Sources */,
 				9D641901223B69B900CB284A /* OrderViewController.swift in Sources */,

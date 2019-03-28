@@ -118,11 +118,21 @@ class OrderViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func showDeliveryAccept(_ sender: Any) {
         
-        let popupVC:DeliveryAcceptViewController = UIStoryboard(name: "DeliveryAccept", bundle: nil).instantiateViewController(withIdentifier:"deliverAcceptVC") as! DeliveryAcceptViewController
+        let popupVC:DeliveryAcceptViewController = UIStoryboard(name: "DeliveryAccept", bundle: nil).instantiateViewController(withIdentifier:"deliveryAcceptVC") as! DeliveryAcceptViewController
         popupVC.modalPresentationStyle = .overCurrentContext
         self.present(popupVC, animated: false){ }
         
     }
+    
+    @IBAction func showDeliveryDeny(_ sender: Any) {
+    
+        let denyVC:DeliveryDenyViewController = UIStoryboard(name: "DeliveryDeny", bundle: nil).instantiateViewController(withIdentifier:"deliveryDenyVC") as! DeliveryDenyViewController
+        denyVC.modalPresentationStyle = .overCurrentContext
+        self.present(denyVC, animated: false){ }
+    }
+    
+    
+    
     
     
 }
@@ -137,7 +147,7 @@ extension OrderViewController {
     private func correctBarButtonState() {
         self.navigationItem.rightBarButtonItems = nil
         
-        let bottomBarButtonItem: UIBarButtonItem
+//        let bottomBarButtonItem: UIBarButtonItem
         
 //        if Person.bestFriends.contains(self.order) {
         if true {
