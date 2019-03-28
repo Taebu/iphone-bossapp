@@ -15,7 +15,7 @@ class DeliveryDenyViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //deliveryDenyCenterY.constant = 1000
+        deliveryDenyCenterY.constant = 1000
     }
     
     @IBAction func dismiss(_ sender: Any) {
@@ -30,12 +30,12 @@ class DeliveryDenyViewController: UIViewController {
         
         //popupImageHeight.constant = calcHeight
         
-        //deliveryDenyCenterY.constant = 0
-    /*
+        deliveryDenyCenterY.constant = 0
+    
         UIView.animate(withDuration: 0.5){
             self.view.layoutIfNeeded()
         }
- */
+ 
     }
     /*
     // MARK: - Navigation

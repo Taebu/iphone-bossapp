@@ -131,6 +131,15 @@ extension OrderWaitTableViewController {
             self.showActivityIndicator()
         }
         
+        Request.orders(order_status: "wait"){ (orders: [Order]?) in
+            if let orders = orders {
+                self.orders = orders
+                self.tableView.reloadSections(IndexSet(0...0),
+                                              with: UITableView.RowAnimation.automatic)
+                
+        }
+        
+            /*
         Request.orders { (orders: [Order]?) in
             if let orders = orders {
                 self.orders = orders
@@ -138,6 +147,7 @@ extension OrderWaitTableViewController {
                                               with: UITableView.RowAnimation.automatic)
                 
             }
+            */
             /* 새로고침 */
             if let refreshControl: UIRefreshControl = self.tableView.refreshControl,
                 refreshControl.isRefreshing == true {

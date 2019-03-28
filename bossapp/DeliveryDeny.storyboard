@@ -181,6 +181,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UpQ-gz-UxH"/>
                     </view>
+                    <connections>
+                        <outlet property="deliveryDenyCenterY" destination="xHn-Kg-v6c" id="3w5-9K-UNS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDG-cn-zY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

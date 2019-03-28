@@ -201,10 +201,40 @@ extension OrderViewController {
         
         self.correctBarButtonState()
         
+        menuPriceData[3] = order.appamount
+        menuPriceData[2] = order.Tradeid
+        menuPriceData[1] = "order"
+  
+        menuPriceData2[0] = order.mb_hp
+        menuPriceData2[1] = """
+\(order.mb_addr1)
+\(order.mb_addr2)
+"""
+        menuDetailData[0] = order.st_name
+        menuDetailData[1] = order.insdate
+        menuDetailData[2] = order.up_time
+        menuDetailData[3] = order.exam_num2
+        
+        menuDetailData[4] = order.Tradeid
+        /*
+        let decoder = JSONDecoder()
+        var jsonData = try JSONSerialization.data(withJSONObject:  order.json_menudata)
+       // jsonData = String(data: jsonData, encoding: .utf8)
+        let modelObject = try? decoder.decode(self,from: jsonData)
+        print(modelObject)
+        */
+       // getJSONData(json_data: order.json_menudata)
+        
         self.storeName.text = order.st_name
         self.cellLabel.text = order.insdate
         //self.orderTime.text = order.insdate
        // self.imageView.image = self.thumbnailImage ?? placeHolderImage
+        
+    }
+    
+    func getJSONData(json_data: Data)
+    {
+        
         
     }
     override func viewDidLoad() {

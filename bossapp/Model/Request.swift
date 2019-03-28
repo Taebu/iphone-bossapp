@@ -27,7 +27,7 @@ struct Request {
 
     //     private static let ordersURL: URL = URL(string: "https://www.cashq.co.kr/ext/dyinfo/get_order3.php?id=B0006797&listsize=1")!
 
-    private static let ordersURL: URL = URL(string: "https://prq.co.kr/prq/list.php")!
+//    let ordersURL: URL = URL(string: "https://img.cashq.co.kr/api/get_order.php")!
     
     // 이미지 다운로드 디스패치 큐
     private static let imageDispatchQueue: DispatchQueue = DispatchQueue(label: "image")
@@ -39,9 +39,10 @@ struct Request {
 // MARK: - Friends
 extension Request {
     // 친구목록 요청
-    static func orders(_ completion: @escaping (_ orders: [Order]?) -> Void) {
+    static func orders(order_status: String,_ completion: @escaping (_ orders: [Order]?) -> Void) {
         let session: URLSession = URLSession(configuration: URLSessionConfiguration.default)
-       
+        var ordersURL: URL = URL(string: "https://img.cashq.co.kr/api/get_order.php?id=B0084902&status="+order_status)!
+        
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let dataTask: URLSessionDataTask = session.dataTask(with: ordersURL) {
             (data: Data?, response: URLResponse?, error: Error?) in
