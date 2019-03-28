@@ -10,13 +10,31 @@ import UIKit
 
 class DeliveryAcceptViewController: UIViewController {
 
+    @IBOutlet weak var deliveryAcceptCenterY: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        deliveryAcceptCenterY.constant = 1000
     }
     
-
+    @IBAction func dismiss(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        //let ratio = (popupImageView.image?.size.width)! / popupImageView.frame.size.width
+        
+        //let calcHeight = (popupImageView.image?.size.height)! / ratio
+        
+        //popupImageHeight.constant = calcHeight
+        
+        deliveryAcceptCenterY.constant = 0
+        
+        UIView.animate(withDuration: 0.5){
+            self.view.layoutIfNeeded()
+        }
+    }
     /*
     // MARK: - Navigation
 
