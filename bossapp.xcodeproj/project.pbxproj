@@ -24,6 +24,9 @@
 		9D770E81224B3C70008C7614 /* DeliveryAcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D770E80224B3C6F008C7614 /* DeliveryAcceptViewController.swift */; };
 		9D770E83224B3C9F008C7614 /* DeliveryAccept.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D770E82224B3C9F008C7614 /* DeliveryAccept.storyboard */; };
 		9D770E86224C5B30008C7614 /* DeliveryDenyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D770E85224C5B2F008C7614 /* DeliveryDenyViewController.swift */; };
+		9DBDD2EF224D9F730040FC01 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBDD2EE224D9F730040FC01 /* LoginViewController.swift */; };
+		9DBDD2F1224DBBCE0040FC01 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBDD2F0224DBBCE0040FC01 /* Auth.swift */; };
+		9DBDD2F4224E09100040FC01 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DBDD2F2224E09100040FC01 /* CoreData.xcdatamodeld */; };
 		9DED2568224C6BDA00F6195D /* DeliveryDeny.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DED2567224C6BD900F6195D /* DeliveryDeny.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,9 @@
 		9D770E80224B3C6F008C7614 /* DeliveryAcceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAcceptViewController.swift; sourceTree = "<group>"; };
 		9D770E82224B3C9F008C7614 /* DeliveryAccept.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeliveryAccept.storyboard; sourceTree = "<group>"; };
 		9D770E85224C5B2F008C7614 /* DeliveryDenyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDenyViewController.swift; sourceTree = "<group>"; };
+		9DBDD2EE224D9F730040FC01 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9DBDD2F0224DBBCE0040FC01 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		9DBDD2F3224E09100040FC01 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		9DED2567224C6BD900F6195D /* DeliveryDeny.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeliveryDeny.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +81,7 @@
 			children = (
 				9D6418F122363ACE00CB284A /* Order.swift */,
 				9D770CCA223F4801008C7614 /* Request.swift */,
+				9DBDD2F0224DBBCE0040FC01 /* Auth.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,7 +91,9 @@
 			children = (
 				9D755DA7222FAE0400D6407F /* AppDelegate.swift */,
 				9D6418EB2235EDEF00CB284A /* ShowSplashScreen.swift */,
+				9DBDD2EE224D9F730040FC01 /* LoginViewController.swift */,
 				9D6418ED2235F16F00CB284A /* MainTabBarController.swift */,
+				9DBDD2F2224E09100040FC01 /* CoreData.xcdatamodeld */,
 				9D641900223B69B900CB284A /* OrderViewController.swift */,
 				9D6418E72232055F00CB284A /* OrderWaitTableViewController.swift */,
 				9D641902223B8DDD00CB284A /* OrderProcessingTableViewController.swift */,
@@ -210,6 +219,7 @@
 			files = (
 				9D6418F02236290B00CB284A /* OrderTableViewCell.swift in Sources */,
 				9D641903223B8DDD00CB284A /* OrderProcessingTableViewController.swift in Sources */,
+				9DBDD2F4224E09100040FC01 /* CoreData.xcdatamodeld in Sources */,
 				9D641905223B8DFA00CB284A /* OrderInfoTableViewController.swift in Sources */,
 				9D755DA8222FAE0400D6407F /* AppDelegate.swift in Sources */,
 				9D6418EC2235EDEF00CB284A /* ShowSplashScreen.swift in Sources */,
@@ -219,6 +229,8 @@
 				9D770E86224C5B30008C7614 /* DeliveryDenyViewController.swift in Sources */,
 				9D770E81224B3C70008C7614 /* DeliveryAcceptViewController.swift in Sources */,
 				9D6418F222363ACE00CB284A /* Order.swift in Sources */,
+				9DBDD2F1224DBBCE0040FC01 /* Auth.swift in Sources */,
+				9DBDD2EF224D9F730040FC01 /* LoginViewController.swift in Sources */,
 				9D641901223B69B900CB284A /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +433,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9DBDD2F2224E09100040FC01 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9DBDD2F3224E09100040FC01 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 9DBDD2F3224E09100040FC01 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9D755D9C222FAE0400D6407F /* Project object */;
 }

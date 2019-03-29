@@ -14,7 +14,7 @@
         <!--로그인-->
         <scene sceneID="T6T-Ft-JJ6">
             <objects>
-                <viewController id="GfY-4A-FaX" sceneMemberID="viewController">
+                <viewController id="GfY-4A-FaX" customClass="LoginViewController" customModule="bossapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2MU-OO-BW3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
                                             <color key="titleShadowColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="CIE-rn-Vop" kind="show" id="c1V-XE-VVV"/>
+                                            <action selector="pushLoginButton:" destination="GfY-4A-FaX" eventType="touchUpInside" id="M8f-ly-3VQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -74,15 +74,20 @@
                         <viewLayoutGuide key="safeArea" id="5as-Br-yy2"/>
                     </view>
                     <navigationItem key="navigationItem" title="로그인" id="LWe-1e-Lcq" colorLabel="IBBuiltInLabel-Red"/>
+                    <connections>
+                        <outlet property="login_button" destination="1yh-Pk-Feu" id="bRt-zy-gbJ"/>
+                        <outlet property="mb_id" destination="rqb-IT-FKR" id="xR0-I8-sXD"/>
+                        <outlet property="mb_password" destination="d0Z-Tz-QtI" id="r8B-U1-7WM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gj-Bl-ERI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="-611.24437781109452"/>
+            <point key="canvasLocation" x="2011.594202898551" y="-611.41304347826087"/>
         </scene>
         <!--주문대기-->
         <scene sceneID="5qW-Ho-UDl">
             <objects>
-                <tableViewController id="ncA-9R-Bqh" customClass="OrderWaitTableViewController" customModule="bossapp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="orderWaitVC" id="ncA-9R-Bqh" customClass="OrderWaitTableViewController" customModule="bossapp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="168" estimatedRowHeight="-1" sectionHeaderHeight="46" sectionFooterHeight="28" id="TyL-2e-f2e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -835,10 +840,10 @@
             </objects>
             <point key="canvasLocation" x="1072.8" y="2138.6806596701649"/>
         </scene>
-        <!--Main Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="gjU-e8-eX4">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ifc-2K-YVr" customClass="MainTabBarController" customModule="bossapp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ifc-2K-YVr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F9O-Ji-JRs">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
