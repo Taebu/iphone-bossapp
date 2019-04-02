@@ -86,17 +86,22 @@ class LoginViewController: UIViewController {
             if let unwrapped = server_response["success"] {
                 if unwrapped as? Int == 1
                 {
-                    /*
-                    var rootVC : UIViewController?
+ 
+ var rootVC : UIViewController?
                     
-                    
-                    rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "orderWaitVC") as! OrderWaitTableViewController
+ 
+                    rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
                     
                     
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
                     appDelegate.window?.rootViewController = rootVC
+                    /*
+                     
+                     */
+                    /*
+                    let homeVc = self.storeyboard?.instantiateViewController(withIdentifier:"loginVC") as! LoginViewController
+                    self.navigationController?.pushViewController(homeVc, animated: true)
                     */
-                    
                 }else{
                     print("login fail")
 
@@ -135,10 +140,10 @@ class LoginViewController: UIViewController {
     
     func LoginToDo()
     {
-        mb_id.isEnabled = true
-        mb_password.isEnabled = true
+       // mb_id.isEnabled = true
+       // mb_password.isEnabled = true
         
-        login_button.setTitle("Login", for: .normal)
+        //login_button.setTitle("Login", for: .normal)
     }
     
     

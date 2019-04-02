@@ -862,10 +862,10 @@
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="763.26836581709154"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="T9Q-A0-YAJ">
             <objects>
-                <viewController id="CIE-rn-Vop" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="CIE-rn-Vop" customClass="LoginViewController" customModule="bossapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DbE-uf-ogM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -909,6 +909,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AKH-Do-10m"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="2o9-Q4-yNK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-3T-U3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
