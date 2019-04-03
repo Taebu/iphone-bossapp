@@ -86,22 +86,32 @@ class LoginViewController: UIViewController {
             if let unwrapped = server_response["success"] {
                 if unwrapped as? Int == 1
                 {
+                    DispatchQueue.main.async(execute: {
+                        // work Needs to be done
+                        let mainTabBarController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as! MainTabBarController
+                            mainTabBarController.selectedViewController = mainTabBarController.viewControllers?[2]
+                        self.present(mainTabBarController, animated: true, completion: nil)
+                    })
+/*
+                    var loginVC : UIViewController?
+      
+                    var mainTabBarVC : UIViewController?
+                    
+                        
+                    mainTabBarVC?.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
  
- var rootVC : UIViewController?
-                    
+ loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
  
-                    rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
-                    
-                    
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.window?.rootViewController = rootVC
-                    /*
+                    appDelegate.window?.rootViewController = loginVC
+ */
+ /*
                      
                      */
                     /*
                     let homeVc = self.storeyboard?.instantiateViewController(withIdentifier:"loginVC") as! LoginViewController
                     self.navigationController?.pushViewController(homeVc, animated: true)
-                    */
+ */
                 }else{
                     print("login fail")
 

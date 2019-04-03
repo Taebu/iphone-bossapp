@@ -14,28 +14,28 @@
         <!--로그인-->
         <scene sceneID="T6T-Ft-JJ6">
             <objects>
-                <viewController id="GfY-4A-FaX" customClass="LoginViewController" customModule="bossapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GfY-4A-FaX" customClass="LoginViewController" customModule="bossapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2MU-OO-BW3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="sSN-dK-Y5f">
-                                <rect key="frame" x="36.999999999999979" y="97" width="109.66666666666669" height="140"/>
+                                <rect key="frame" x="37" y="53" width="339" height="140"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사장님 아이디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-IT-FKR">
-                                        <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사장님 비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d0Z-Tz-QtI">
-                                        <rect key="frame" x="0.0" y="55" width="109.66666666666667" height="30"/>
+                                        <rect key="frame" x="0.0" y="55" width="339" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yh-Pk-Feu">
-                                        <rect key="frame" x="0.0" y="110" width="109.66666666666667" height="30"/>
+                                        <rect key="frame" x="0.0" y="110" width="339" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="로그인">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,13 +48,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="vrg-VI-tfa">
-                                <rect key="frame" x="-1" y="242" width="148.66666666666666" height="31"/>
+                                <rect key="frame" x="228.33333333333337" y="198" width="148.66666666666663" height="31"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJJ-Fd-J8J">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자동로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9S-CM-TjL">
-                                        <rect key="frame" x="75" y="0.0" width="73.666666666666686" height="31"/>
+                                        <rect key="frame" x="74.999999999999972" y="0.0" width="73.666666666666657" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gj-Bl-ERI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2011.594202898551" y="-611.41304347826087"/>
+            <point key="canvasLocation" x="-649" y="762"/>
         </scene>
         <!--주문대기-->
         <scene sceneID="5qW-Ho-UDl">
@@ -814,7 +814,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="GfY-4A-FaX" kind="relationship" relationship="rootViewController" id="Z7W-IM-0fQ"/>
+                        <segue destination="CIE-rn-Vop" kind="relationship" relationship="rootViewController" id="rD9-tw-7KW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCv-9L-TYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -840,12 +840,12 @@
             </objects>
             <point key="canvasLocation" x="1072.8" y="2138.6806596701649"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="gjU-e8-eX4">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ifc-2K-YVr" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ifc-2K-YVr" customClass="MainTabBarController" customModule="bossapp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F9O-Ji-JRs">
+                    <tabBar key="tabBar" contentMode="scaleToFill" restorationIdentifier="mainTabId" insetsLayoutMarginsFromSafeArea="NO" id="F9O-Ji-JRs">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -910,10 +910,11 @@
                         <viewLayoutGuide key="safeArea" id="AKH-Do-10m"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="2o9-Q4-yNK"/>
+                    <navigationItem key="navigationItem" id="hQ3-2C-jNf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9u-3T-U3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2757.5999999999999" y="-611.24437781109452"/>
+            <point key="canvasLocation" x="2401" y="-605"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="H6H-kb-ZtI">
@@ -963,12 +964,12 @@
                         <viewLayoutGuide key="safeArea" id="iTM-Fa-FjH"/>
                     </view>
                     <connections>
-                        <segue destination="ifc-2K-YVr" kind="show" identifier="showSplashScreen" id="Nbo-8h-nFg"/>
+                        <segue destination="GfY-4A-FaX" kind="show" identifier="showSplashScreen" id="rmX-HZ-Lp3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAW-5D-xfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-771" y="757"/>
+            <point key="canvasLocation" x="-1332" y="763"/>
         </scene>
     </scenes>
     <resources>

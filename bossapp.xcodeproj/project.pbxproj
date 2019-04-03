@@ -421,7 +421,7 @@
 				9D755DB5222FAE0500D6407F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		9D755DB6222FAE0500D6407F /* Build configuration list for PBXNativeTarget "bossapp" */ = {
 			isa = XCConfigurationList;
@@ -430,7 +430,7 @@
 				9D755DB8222FAE0500D6407F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

@@ -6,6 +6,7 @@
 //  Copyright © 2019 ANPR. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class MainTabBarController: UITabBarController {
