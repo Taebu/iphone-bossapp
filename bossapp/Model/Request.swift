@@ -39,12 +39,18 @@ struct Request {
 // MARK: - Friends
 extension Request {
     // 친구목록 요청
+<<<<<<< HEAD
     static func orders(order_status: String, mb_id: String,_ completion: @escaping (_ orders: [Order]?) -> Void) {
         let session: URLSession = URLSession(configuration: URLSessionConfiguration.default)
         //let mb_id = "B0084702"
         
         var ordersURL: URL = URL(string: "https://img.cashq.co.kr/api/get_order.php?id=\(mb_id)&status=\(order_status)")!
         //B0084702
+=======
+    static func orders(order_status: String,_ completion: @escaping (_ orders: [Order]?) -> Void) {
+        let session: URLSession = URLSession(configuration: URLSessionConfiguration.default)
+        var ordersURL: URL = URL(string: "https://img.cashq.co.kr/api/get_order.php?id=B0084702&status="+order_status)!
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let dataTask: URLSessionDataTask = session.dataTask(with: ordersURL) {

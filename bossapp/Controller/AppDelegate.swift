@@ -7,6 +7,7 @@
 // ? test 
 
 import UIKit
+<<<<<<< HEAD
 import UserNotifications
 
 @UIApplicationMain
@@ -60,6 +61,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         UIApplication.shared.registerForRemoteNotifications()
         
+=======
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
         return true
     }
 

@@ -131,8 +131,12 @@ extension OrderProcessingTableViewController {
             self.showActivityIndicator()
         }
         
+<<<<<<< HEAD
         
         Request.orders(order_status: "processing", mb_id:UserDefaults.standard.string(forKey: "mb_id") ?? "B06747") { (orders: [Order]?) in
+=======
+        Request.orders(order_status: "processing") { (orders: [Order]?) in
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
             if let orders = orders {
                 self.orders = orders
                 self.tableView.reloadSections(IndexSet(0...0),

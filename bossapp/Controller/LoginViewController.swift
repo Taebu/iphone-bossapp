@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var login_button: UIButton!
     
+<<<<<<< HEAD
     @IBOutlet weak var autoLoginSwitch: UISwitch!
 
     var isAutoLogin = false
@@ -41,6 +42,10 @@ class LoginViewController: UIViewController {
             return
         }
         
+=======
+    @IBAction func pushLoginButton(_ sender: Any) {
+        
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
         if(login_button.titleLabel?.text == "Logout")
         {
             let preferences = UserDefaults.standard
@@ -64,6 +69,10 @@ class LoginViewController: UIViewController {
     {
         print(user + " : " + password)
         let url = URL(string:"https://img.cashq.co.kr/api/login/get_auth.php")
+<<<<<<< HEAD
+=======
+        
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
         let session = URLSession.shared
         let request = NSMutableURLRequest(url: url!)
         request.httpMethod = "POST"
@@ -92,8 +101,11 @@ class LoginViewController: UIViewController {
             catch
             {
                 print("network fail")
+<<<<<<< HEAD
                 
                 self.Alert(Message: "network fail.")
+=======
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
                 return
             }
             
@@ -110,9 +122,12 @@ class LoginViewController: UIViewController {
             if let unwrapped = server_response["success"] {
                 if unwrapped as? Int == 1
                 {
+<<<<<<< HEAD
                     
                     UserDefaults.standard.set(server_response["st_name"], forKey: "st_name")
                     
+=======
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
                     DispatchQueue.main.async(execute: {
                         // work Needs to be done
                         let mainTabBarController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as! MainTabBarController
@@ -139,6 +154,7 @@ class LoginViewController: UIViewController {
                     let homeVc = self.storeyboard?.instantiateViewController(withIdentifier:"loginVC") as! LoginViewController
                     self.navigationController?.pushViewController(homeVc, animated: true)
  */
+<<<<<<< HEAD
                     
                     UserDefaults.standard.set(user, forKey: "mb_id")
                     UserDefaults.standard.set(password, forKey: "mb_password")
@@ -146,13 +162,20 @@ class LoginViewController: UIViewController {
                     print("login fail")
                     //self.Alert(Message: "로그인에 실패하였습니다. \n 비밀번호를 확인해 주세요.")
                     return
+=======
+                }else{
+                    print("login fail")
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
 
                 }
                 print("unwrap bool: \(unwrapped),,,")
                // Toast.show(message: "로그인 실패", OrderViewController)
               
             }
+<<<<<<< HEAD
             /*
+=======
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
             if let data_block = server_response["data"] as? NSDictionary
             {
                 print(data_block)
@@ -166,7 +189,10 @@ class LoginViewController: UIViewController {
                     
                 }
             }
+<<<<<<< HEAD
  */
+=======
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
             
         })
         
@@ -207,6 +233,7 @@ class LoginViewController: UIViewController {
             LoginToDo()
             
         }
+<<<<<<< HEAD
         
         autoLoginSwitch.addTarget(self, action: #selector(switchChanged), for: UIControl.Event.valueChanged)
         
@@ -238,6 +265,11 @@ class LoginViewController: UIViewController {
         }
     }
     
+=======
+    }
+    
+
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
     /*
     // MARK: - Navigation
 
@@ -247,6 +279,7 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+<<<<<<< HEAD
     
 
     func Alert (Message: String){
@@ -327,4 +360,7 @@ class LoginViewController: UIViewController {
         task.resume()
         
     }
+=======
+
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
 }

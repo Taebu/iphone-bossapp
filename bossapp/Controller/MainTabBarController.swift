@@ -8,13 +8,17 @@
 
 import Foundation
 import UIKit
+<<<<<<< HEAD
 import UserNotifications
+=======
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
 
 class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+<<<<<<< HEAD
         let content = UNMutableNotificationContent()
         content.title = "Title"
         content.body = "Body"
@@ -28,6 +32,8 @@ class MainTabBarController: UITabBarController {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         
         
+=======
+>>>>>>> ca74339373deaa0e4e179d1f28cb5c95a7cf8c02
         // Do any additional setup after loading the view.
     }
     
