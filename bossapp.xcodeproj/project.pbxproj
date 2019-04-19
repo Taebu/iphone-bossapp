@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D565D6F2255E23B004E404B /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D565D6E2255E23B004E404B /* PageViewController.swift */; };
+		9D565D7122573B98004E404B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D565D7022573B98004E404B /* HomeViewController.swift */; };
+		9D565D7322647DB9004E404B /* order_new.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9D565D7222647DB8004E404B /* order_new.wav */; };
 		9D6418E82232055F00CB284A /* OrderWaitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6418E72232055F00CB284A /* OrderWaitTableViewController.swift */; };
 		9D6418EC2235EDEF00CB284A /* ShowSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6418EB2235EDEF00CB284A /* ShowSplashScreen.swift */; };
 		9D6418EE2235F16F00CB284A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6418ED2235F16F00CB284A /* MainTabBarController.swift */; };
@@ -24,6 +27,7 @@
 		9D770E81224B3C70008C7614 /* DeliveryAcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D770E80224B3C6F008C7614 /* DeliveryAcceptViewController.swift */; };
 		9D770E83224B3C9F008C7614 /* DeliveryAccept.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D770E82224B3C9F008C7614 /* DeliveryAccept.storyboard */; };
 		9D770E86224C5B30008C7614 /* DeliveryDenyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D770E85224C5B2F008C7614 /* DeliveryDenyViewController.swift */; };
+		9D7FF7A822559A20005DC761 /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FF7A722559A20005DC761 /* CheckInternet.swift */; };
 		9DBDD2EF224D9F730040FC01 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBDD2EE224D9F730040FC01 /* LoginViewController.swift */; };
 		9DBDD2F1224DBBCE0040FC01 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBDD2F0224DBBCE0040FC01 /* Auth.swift */; };
 		9DBDD2F4224E09100040FC01 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DBDD2F2224E09100040FC01 /* CoreData.xcdatamodeld */; };
@@ -31,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D565D6E2255E23B004E404B /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = Controller/PageViewController.swift; sourceTree = "<group>"; };
+		9D565D7022573B98004E404B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9D565D7222647DB8004E404B /* order_new.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = order_new.wav; sourceTree = "<group>"; };
 		9D6418E72232055F00CB284A /* OrderWaitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWaitTableViewController.swift; sourceTree = "<group>"; };
 		9D6418EB2235EDEF00CB284A /* ShowSplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSplashScreen.swift; sourceTree = "<group>"; };
 		9D6418ED2235F16F00CB284A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -51,6 +58,7 @@
 		9D770E80224B3C6F008C7614 /* DeliveryAcceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAcceptViewController.swift; sourceTree = "<group>"; };
 		9D770E82224B3C9F008C7614 /* DeliveryAccept.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeliveryAccept.storyboard; sourceTree = "<group>"; };
 		9D770E85224C5B2F008C7614 /* DeliveryDenyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDenyViewController.swift; sourceTree = "<group>"; };
+		9D7FF7A722559A20005DC761 /* CheckInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
 		9DBDD2EE224D9F730040FC01 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9DBDD2F0224DBBCE0040FC01 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		9DBDD2F3224E09100040FC01 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
@@ -98,6 +106,7 @@
 				9D6418E72232055F00CB284A /* OrderWaitTableViewController.swift */,
 				9D641902223B8DDD00CB284A /* OrderProcessingTableViewController.swift */,
 				9D641904223B8DFA00CB284A /* OrderInfoTableViewController.swift */,
+				9D565D7022573B98004E404B /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -122,10 +131,12 @@
 		9D755DA6222FAE0400D6407F /* bossapp */ = {
 			isa = PBXGroup;
 			children = (
+				9D565D7222647DB8004E404B /* order_new.wav */,
 				9D6418F3223643FA00CB284A /* bossapp.entitlements */,
 				9D6418F72238BFB200CB284A /* Model */,
 				9D6418F62238BF8E00CB284A /* View */,
 				9D6418F82238BFD500CB284A /* Controller */,
+				9D565D6E2255E23B004E404B /* PageViewController.swift */,
 				9D755DAB222FAE0400D6407F /* Main.storyboard */,
 				9D755DAE222FAE0500D6407F /* Assets.xcassets */,
 				9D755DB0222FAE0500D6407F /* LaunchScreen.storyboard */,
@@ -134,6 +145,7 @@
 				9D770E85224C5B2F008C7614 /* DeliveryDenyViewController.swift */,
 				9D770E82224B3C9F008C7614 /* DeliveryAccept.storyboard */,
 				9DED2567224C6BD900F6195D /* DeliveryDeny.storyboard */,
+				9D7FF7A722559A20005DC761 /* CheckInternet.swift */,
 			);
 			path = bossapp;
 			sourceTree = "<group>";
@@ -202,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D755DB2222FAE0500D6407F /* LaunchScreen.storyboard in Resources */,
+				9D565D7322647DB9004E404B /* order_new.wav in Resources */,
 				9D755DAF222FAE0500D6407F /* Assets.xcassets in Resources */,
 				9DED2568224C6BDA00F6195D /* DeliveryDeny.storyboard in Resources */,
 				9D641907223B997500CB284A /* README.md in Resources */,
@@ -222,8 +235,11 @@
 				9DBDD2F4224E09100040FC01 /* CoreData.xcdatamodeld in Sources */,
 				9D641905223B8DFA00CB284A /* OrderInfoTableViewController.swift in Sources */,
 				9D755DA8222FAE0400D6407F /* AppDelegate.swift in Sources */,
+				9D565D7122573B98004E404B /* HomeViewController.swift in Sources */,
+				9D7FF7A822559A20005DC761 /* CheckInternet.swift in Sources */,
 				9D6418EC2235EDEF00CB284A /* ShowSplashScreen.swift in Sources */,
 				9D6418EE2235F16F00CB284A /* MainTabBarController.swift in Sources */,
+				9D565D6F2255E23B004E404B /* PageViewController.swift in Sources */,
 				9D6418E82232055F00CB284A /* OrderWaitTableViewController.swift in Sources */,
 				9D770CCB223F4801008C7614 /* Request.swift in Sources */,
 				9D770E86224C5B30008C7614 /* DeliveryDenyViewController.swift in Sources */,

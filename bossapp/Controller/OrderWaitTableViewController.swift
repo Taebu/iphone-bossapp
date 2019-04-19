@@ -130,8 +130,8 @@ extension OrderWaitTableViewController {
             isRefreshing == false {
             self.showActivityIndicator()
         }
-        
-        Request.orders(order_status: "wait"){ (orders: [Order]?) in
+
+        Request.orders(order_status: "wait", mb_id:UserDefaults.standard.string(forKey: "mb_id") ?? "B06747"){ (orders: [Order]?) in
             if let orders = orders {
                 self.orders = orders
                 self.tableView.reloadSections(IndexSet(0...0),

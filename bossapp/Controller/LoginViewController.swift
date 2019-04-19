@@ -16,7 +16,30 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var login_button: UIButton!
     
+    @IBOutlet weak var autoLoginSwitch: UISwitch!
+
+    var isAutoLogin = false
+    @objc func switchChanged(mySwitch: UISwitch) {
+        isAutoLogin = mySwitch.isOn
+        
+        UserDefaults.standard.set(isAutoLogin, forKey: "isAutoLogin")
+        
+        print("this switch value : \(isAutoLogin)")
+        
+        // Do something
+    }
+    
+    
+ 
     @IBAction func pushLoginButton(_ sender: Any) {
+        
+        if !CheckInternet.Connection(){
+            
+            //self.Alert(Message: "Connected")
+            //self.Alert(Message: "Your Device is not connected with internet")
+            self.Alert(Message: "인터넷이 연결 되지 않았습니다. 연결상태를 확인해주세요.")
+            return
+        }
         
         if(login_button.titleLabel?.text == "Logout")
         {
@@ -41,7 +64,6 @@ class LoginViewController: UIViewController {
     {
         print(user + " : " + password)
         let url = URL(string:"https://img.cashq.co.kr/api/login/get_auth.php")
-        
         let session = URLSession.shared
         let request = NSMutableURLRequest(url: url!)
         request.httpMethod = "POST"
@@ -70,6 +92,8 @@ class LoginViewController: UIViewController {
             catch
             {
                 print("network fail")
+                
+                self.Alert(Message: "network fail.")
                 return
             }
             
@@ -86,6 +110,9 @@ class LoginViewController: UIViewController {
             if let unwrapped = server_response["success"] {
                 if unwrapped as? Int == 1
                 {
+                    
+                    UserDefaults.standard.set(server_response["st_name"], forKey: "st_name")
+                    
                     DispatchQueue.main.async(execute: {
                         // work Needs to be done
                         let mainTabBarController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as! MainTabBarController
@@ -112,14 +139,20 @@ class LoginViewController: UIViewController {
                     let homeVc = self.storeyboard?.instantiateViewController(withIdentifier:"loginVC") as! LoginViewController
                     self.navigationController?.pushViewController(homeVc, animated: true)
  */
+                    
+                    UserDefaults.standard.set(user, forKey: "mb_id")
+                    UserDefaults.standard.set(password, forKey: "mb_password")
                 }else{
                     print("login fail")
+                    //self.Alert(Message: "로그인에 실패하였습니다. \n 비밀번호를 확인해 주세요.")
+                    return
 
                 }
                 print("unwrap bool: \(unwrapped),,,")
                // Toast.show(message: "로그인 실패", OrderViewController)
               
             }
+            /*
             if let data_block = server_response["data"] as? NSDictionary
             {
                 print(data_block)
@@ -133,6 +166,7 @@ class LoginViewController: UIViewController {
                     
                 }
             }
+ */
             
         })
         
@@ -173,9 +207,37 @@ class LoginViewController: UIViewController {
             LoginToDo()
             
         }
+        
+        autoLoginSwitch.addTarget(self, action: #selector(switchChanged), for: UIControl.Event.valueChanged)
+        
+        if UserDefaults.standard.bool(forKey: "isAutoLogin") {
+            
+            let mb_id = UserDefaults.standard.string(forKey: "mb_id")
+            let mb_password = UserDefaults.standard.string(forKey: "mb_password")
+            print ("mb_id : \(mb_id) , \(mb_password)")
+            if mb_id != nil && mb_password != nil
+            {
+            DoLogin(mb_id!, mb_password!)
+            }
+        }
+        
+        mb_id.text = UserDefaults.standard.string(forKey: "mb_id")
+        mb_password.text = UserDefaults.standard.string(forKey: "mb_password")
+        autoLoginSwitch.isOn = UserDefaults.standard.bool(forKey: "isAutoLogin")
+        
+        let token = UserDefaults.standard.string(forKey: "token")
+        let scode = UserDefaults.standard.string(forKey: "mb_id")
+        
+        setToken(scode!, token!)
+        
+        if let uuid = UIDevice.current.identifierForVendor?.uuidString {
+            print("uuid : ")
+            
+            print(uuid)
+
+        }
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -185,5 +247,84 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
+    func Alert (Message: String){
+    
+        let alert = UIAlertController(title: "Alert", message: Message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+
+    func setToken(_ user:String, _ token:String)
+    {
+        print(user + " : " + token)
+        let url = URL(string:"https://img.cashq.co.kr/api/token/set_token.php")
+        
+        let session = URLSession.shared
+        let request = NSMutableURLRequest(url: url!)
+        request.httpMethod = "POST"
+        
+        let paramToSend = "scode=\(user)&ti_token=\(token)"
+        request.httpBody = paramToSend.data(using: String.Encoding.utf8)
+        
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {
+            (data, response, error) in
+            
+            
+            guard let _:Data = data else
+            {
+                return
+            }
+            
+            let json:Any?
+            
+            do
+            {
+                json = try JSONSerialization.jsonObject(with: data!, options: [])
+                print("json : ")
+                print(json)
+            }
+            catch
+            {
+                print("network fail")
+                
+                self.Alert(Message: "network fail.")
+                return
+            }
+            
+            guard let server_response = json as? NSDictionary else
+            {
+                
+                //print(server_response)
+                //                print(server_response["request"])
+                return
+                
+            }
+            print("server_response : ")
+            print("test : \(server_response["response"]),,,")
+            if let unwrapped = server_response["success"] {
+                if unwrapped as? Int == 1
+                {
+                    
+                    UserDefaults.standard.set(server_response["st_name"], forKey: "st_name")
+                    
+                    UserDefaults.standard.set(user, forKey: "mb_id")
+                    UserDefaults.standard.set(token, forKey: "token")
+                }else{
+                    print("login fail")
+                    //self.Alert(Message: "로그인에 실패하였습니다. \n 비밀번호를 확인해 주세요.")
+                    return
+                    
+                }
+                print("unwrap bool: \(unwrapped),,,")
+                // Toast.show(message: "로그인 실패", OrderViewController)
+                
+            }
+            
+        })
+        
+        task.resume()
+        
+    }
 }

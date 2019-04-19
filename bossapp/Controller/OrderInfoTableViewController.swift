@@ -129,7 +129,8 @@ extension OrderInfoTableViewController {
             self.showActivityIndicator()
         }
         
-        Request.orders(order_status: "end") { (orders: [Order]?) in
+        
+        Request.orders(order_status: "end",mb_id: UserDefaults.standard.string(forKey: "mb_id") ?? "B06747") { (orders: [Order]?) in
             if let orders = orders {
                 self.orders = orders
                 self.tableView.reloadSections(IndexSet(0...0),
